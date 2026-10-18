@@ -22,3 +22,4 @@ uv run lesson_01_intro.py
 - Task 1.1: Your AI Career Intro
 - Task 1.2: Toolkit Proof
 - Task 1.3: Client-Ready Repo
+- Task 1.4: Business Prompt Builder
