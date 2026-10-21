@@ -10,11 +10,10 @@ I am Muhammad Abdullah Akbar. This repo is my work for the Python for AI course 
 uv run main.py
 ```
 
-Lesson scripts live in `code/`:
+Every lesson script lives in `code/`. Run any of them from the repo root:
 
 ```bash
-cd code
-uv run lesson_01_intro.py
+uv run code/lesson_01_intro.py
 ```
 
 ## Module 1 Project: AI Prompt Kit
@@ -48,7 +47,18 @@ The fees, timings and reply texts are example details for practice, not KIPS's r
 
 ## Lessons done so far
 
-- Task 1.1: Your AI Career Intro
-- Task 1.2: Toolkit Proof
-- Task 1.3: Client-Ready Repo
-- Task 1.4: Business Prompt Builder
+| Task | What I built | Files |
+|---|---|---|
+| 1.1 Your AI Career Intro | Prints my name, dream role, a business problem and why | `code/lesson_01_intro.py` |
+| 1.2 Toolkit Proof | Proof that my AI dev tools work, plus my first Ollama chat | `code/lesson_02_toolkit.py`, `docs/setup-check.png`, `docs/ollama-first-chat.md` |
+| 1.3 Client-Ready Repo | This uv project with `code/`, `docs/`, `notebooks/` and a README | `main.py`, `pyproject.toml`, `uv.lock`, `.gitignore` |
+| 1.4 Business Prompt Builder | Asks for business details and builds an AI prompt | `code/lesson_04_print_input.py`, `docs/prompt-test.md` |
+| 1.5 AI Model Profile Card | Model profile with `str`, `int`, `float` and `bool`, and a cost estimate | `code/lesson_05_variables.py` |
+| 1.6 Prompt Cleaner | Cleans a messy name and question, estimates tokens, builds a prompt | `code/lesson_06_strings_prompts.py` |
+| 1.7 Smart Model Router | Picks a model for code, private or chat tasks and estimates the cost | `code/lesson_07_conditions.py` |
+| 1.8 Business Helper Bot | Rule-based chatbot for KIPS (design table above) | `code/lesson_08_mini_chatbot.py` |
+
+Also done:
+
+- Module 1 Checkpoint 1 quick checks: `docs/my-answers-module-1.md`
+- Module 1 Checkpoint 1 project (AI Prompt Kit): `code/project_m1_prompt_kit.py` and `docs/project-m1-results.md`
