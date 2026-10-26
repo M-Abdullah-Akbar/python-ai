@@ -26,6 +26,18 @@ A Python tool that turns a local business's details into 4 ready-to-use AI promp
 
 **Who would pay for this:** small business owners in Pakistan, like tuition academies and shops, who want AI help but don't know what to type.
 
+## Module 1 Final Project: AI Front Desk
+
+A front desk assistant for a local bakery (example business). It answers common questions with free rules, gives exact price quotes with `/quote` (bulk discount and delivery fee), turns every question it cannot answer into a clean AI prompt routed to a local or cloud-style model with a cost estimate, and ends with a session report for the owner.
+
+**Run:** `uv run code/project_m1_front_desk.py`
+
+![AI Front Desk running](docs/project-m1-part2-run.png)
+
+**Who would pay for this:** a bakery owner whose staff answer the same questions and work out price quotes by hand all day. The desk answers the easy questions instantly, quotes prices the same way every time, and the session report shows which questions it could not answer. I have not measured how much time this saves.
+
+Design, rule tests and AI tests: `docs/project-m1-part2-design.md` and `docs/project-m1-part2-results.md`. The business name, prices, hours and phone number are examples for practice.
+
 ## Task 1.8: KIPS Business Helper Bot (design)
 
 A rule-based chatbot for KIPS tuition academy, Lahore. Run: `uv run code/lesson_08_mini_chatbot.py`
@@ -62,3 +74,5 @@ Also done:
 
 - Module 1 Checkpoint 1 quick checks: `docs/my-answers-module-1.md`
 - Module 1 Checkpoint 1 project (AI Prompt Kit): `code/project_m1_prompt_kit.py` and `docs/project-m1-results.md`
+- Module 1 Checkpoint 2 quick checks: `docs/my-answers-module-1.md`
+- Module 1 Checkpoint 2 project (AI Front Desk): `code/project_m1_front_desk.py`, `docs/project-m1-part2-design.md` and `docs/project-m1-part2-results.md`
