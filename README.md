@@ -1,6 +1,6 @@
 # python-ai
 
-I am Muhammad Abdullah Akbar. This repo is my work for the Python for AI course (Module 1: Python Basics for GenAI and Agentic AI).
+I am Muhammad Abdullah Akbar. This repo is my work for the Python for AI course (Module 1: Python Basics for GenAI and Agentic AI, and Module 2: Core Python for Building LLM Apps).
 
 **My AI goal:** become an AI Agent Developer.
 
@@ -15,6 +15,16 @@ Every lesson script lives in `code/`. Run any of them from the repo root:
 ```bash
 uv run code/lesson_01_intro.py
 ```
+
+The Module 2 scripts (`lesson_2_*.py`) talk to a real AI model on my own laptop through [Ollama](https://ollama.com). Before running them:
+
+```bash
+uv sync                 # installs langchain and langchain-ollama from uv.lock
+ollama pull llama3.2    # downloads the model (about 2 GB)
+ollama serve            # only if the Ollama app is not already running
+```
+
+Each AI answer takes a while on my laptop, because the model runs on the CPU.
 
 ## Module 1 Project: AI Prompt Kit
 
@@ -69,6 +79,10 @@ The fees, timings and reply texts are example details for practice, not KIPS's r
 | 1.6 Prompt Cleaner | Cleans a messy name and question, estimates tokens, builds a prompt | `code/lesson_06_strings_prompts.py` |
 | 1.7 Smart Model Router | Picks a model for code, private or chat tasks and estimates the cost | `code/lesson_07_conditions.py` |
 | 1.8 Business Helper Bot | Rule-based chatbot for KIPS (design table above) | `code/lesson_08_mini_chatbot.py` |
+| 2.1 AI Tutor | Asks for a topic and level, calls a local AI model and prints the answer with tokens and time. Stretch: the Module 1 Prompt Kit now sends Prompt 1 to the AI | `code/lesson_2_1_first_ai_call.py`, `code/project_m1_prompt_kit.py` |
+| 2.2 Personal Tutor with Memory | Chat that remembers the conversation in a list, with `/reset`, `/count`, trimmed memory and tokens sent per answer. Stretch: summary of the questions asked | `code/lesson_2_2_chat_memory.py` |
+| 2.3 Persona Bot with Real Facts | Bakery assistant grounded in a facts dictionary, with switchable personas, `/price` answered without the AI, and `/add` to extend the menu | `code/lesson_2_3_persona_bot.py` |
+| 2.4 Batch Product Writer | One loop writes an AI description for every product, skips the item with no price, and reports tokens and time. Stretch: bot battle, rules against AI on 6 questions | `code/lesson_2_4_batch_writer.py`, `code/lesson_2_4_bot_battle.py` |
 
 Also done:
 
