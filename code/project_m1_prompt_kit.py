@@ -5,7 +5,12 @@ AI prompts (marketing, customer service, growth, WhatsApp auto-reply).
 The owner can paste them into Ollama, Claude or ChatGPT.
 
 Built for local business owners who want AI help but don't know what to type.
+
+Module 2 upgrade: Prompt 1 is also sent to a local AI model (Ollama), so the
+owner sees the answer without copy-pasting.
 """
+
+from langchain.chat_models import init_chat_model
 
 business_name = input("Business name: ")
 business_type = input("Business type: ")
@@ -54,3 +59,10 @@ print(growth)
 
 print("\n[4] WhatsApp Auto-Reply")
 print(whatsapp)
+
+# Module 2 upgrade: send Prompt 1 to the AI ourselves instead of copy-pasting it into Ollama.
+# Temperature 0.7 because a social media post should sound creative, not robotic
+print("\n--- AI answer for Prompt 1 (llama3.2) ---")
+writer = init_chat_model("llama3.2", model_provider="ollama", temperature=0.7)
+response = writer.invoke([{"role": "user", "content": marketing}])
+print(response.text)
