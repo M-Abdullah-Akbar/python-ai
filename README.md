@@ -16,7 +16,7 @@ Every lesson script lives in `code/`. Run any of them from the repo root:
 uv run code/lesson_01_intro.py
 ```
 
-The Module 2 scripts (`lesson_2_*.py`) talk to a real AI model on my own laptop through [Ollama](https://ollama.com). Before running them:
+The Module 2 scripts (`lesson_2_*.py` and `project_m2_content_studio.py`) talk to a real AI model on my own laptop through [Ollama](https://ollama.com). Before running them:
 
 ```bash
 uv sync                 # installs langchain and langchain-ollama from uv.lock
@@ -47,6 +47,18 @@ A front desk assistant for a local bakery (example business). It answers common 
 **Who would pay for this:** a bakery owner whose staff answer the same questions and work out price quotes by hand all day. The desk answers the easy questions instantly, quotes prices the same way every time, and the session report shows which questions it could not answer. I have not measured how much time this saves.
 
 Design, rule tests and AI tests: `docs/project-m1-part2-design.md` and `docs/project-m1-part2-results.md`. The business name, prices, hours and phone number are examples for practice.
+
+## Module 2 Checkpoint 1 Project: AI Content Studio
+
+A content studio for a local bakery (example business) that talks to a real AI model on my own laptop. `/menu` writes a description for every product, `/post <tone>` streams a social media post (plus a Roman Urdu version), `/price` answers from the data without the AI, and any other question is answered from real business facts with memory. It ends with a session report of what the AI did.
+
+**Run:** `uv run code/project_m2_content_studio.py` (needs Ollama running with `llama3.2`, see the setup above)
+
+![AI Content Studio running](docs/project-m2-cp1-run.png)
+
+**Who would pay for this:** a bakery owner with no time for marketing, whose menu has no descriptions and who keeps answering the same questions. The studio writes the menu and the posts in one run, answers prices from the real price list so the AI cannot make one up, and reports what it cost. I have not measured how much time or money this saves, and the small local model needs its writing checked by the owner.
+
+Design, feature tests and AI tests: `docs/project-m2-cp1-design.md` and `docs/project-m2-cp1-results.md`. The business name, prices, hours and phone number are examples for practice.
 
 ## Task 1.8: KIPS Business Helper Bot (design)
 
@@ -90,3 +102,4 @@ Also done:
 - Module 1 Checkpoint 1 project (AI Prompt Kit): `code/project_m1_prompt_kit.py` and `docs/project-m1-results.md`
 - Module 1 Checkpoint 2 quick checks: `docs/my-answers-module-1.md`
 - Module 1 Checkpoint 2 project (AI Front Desk): `code/project_m1_front_desk.py`, `docs/project-m1-part2-design.md` and `docs/project-m1-part2-results.md`
+- Module 2 Checkpoint 1 project (AI Content Studio): `code/project_m2_content_studio.py`, `docs/project-m2-cp1-design.md` and `docs/project-m2-cp1-results.md`
